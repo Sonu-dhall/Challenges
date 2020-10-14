@@ -1,0 +1,44 @@
+@media screen and (max-width: 980px) {
+    .wrapper {
+        padding: 2rem 0;
+    }
+    .card {
+        flex-direction: column;
+
+        margin-top: 10rem;
+
+        background-image: url(../../images/bg-pattern-mobile.svg);
+        background-position: 50% -5%;
+        background-repeat: no-repeat;
+        background-size: 250px
+    }
+    .card__body {
+        margin-top: 4rem;
+        padding: 2rem;
+
+        width: 100%;
+    }
+    .card__wraper {
+        overflow: inherit
+    }
+    .card__image--box {
+        height: 80px;
+
+        top: -40px;
+        left: -15px;
+    }
+    .card__image--women {
+        margin: -7rem auto 0 auto;
+
+        max-width: 225px;
+    }
+    .card__body--header {
+        text-align: center;
+    }
+    .attribution {
+        right: 0;
+        bottom: 3px;
+
+        font-size: .775em;
+    }
+}

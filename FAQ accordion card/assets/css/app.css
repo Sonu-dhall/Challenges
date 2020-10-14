@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html, body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+  background: linear-gradient(0deg, #6565e7, #af67e9);
+  color: #1d1e35;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 90%;
+  max-width: 1024px;
+}
+
+.attribution {
+  position: absolute;
+  right: 33px;
+  bottom: 10px;
+  color: #e7e7e9;
+}
+
+.attribution a {
+  color: #f47c57;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  background-image: url(../../images/bg-pattern-desktop.svg);
+  background-position: -65% 67%;
+  background-repeat: no-repeat;
+  background-size: 600px, 48px;
+  border-radius: 1rem;
+}
+
+.card > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  grid-gap: 1rem;
+}
+
+.card__images {
+  position: relative;
+}
+
+.card__wraper {
+  overflow: hidden;
+}
+
+.card__image--women {
+  margin-left: -4rem;
+  max-height: 285px;
+}
+
+.card__image--box {
+  position: absolute;
+  height: 120px;
+  top: 42%;
+  left: -14%;
+}
+
+.card__body {
+  padding: 4rem;
+}
+
+.card__body--header {
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.accordion-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.accordion-item .accordion-item__icon {
+  padding: 0 1rem;
+}
+
+.accordion-item .accordion-item__icon img {
+  cursor: pointer;
+}
+
+.accordion-item .accordion-item__body--title {
+  color: #4a4b5e;
+  font-weight: 400;
+  -webkit-transition: font-weight .4s;
+  transition: font-weight .4s;
+  cursor: pointer;
+}
+
+.accordion-item .accordion-item__body--description {
+  padding-top: 1rem;
+  height: 0;
+  color: #787887;
+  font-weight: 400;
+  line-height: 1.2rem;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: visibility .4s, opacity .4s ease-out;
+  transition: visibility .4s, opacity .4s ease-out;
+}
+
+.accordion-item.active .accordion-item__body--title {
+  font-weight: 700;
+}
+
+.accordion-item.active .accordion-item__body--description {
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+}
+
+.accordion-item.active .accordion-item__icon > img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+
+@media screen and (max-width: 980px) {
+  .wrapper {
+    padding: 2rem 0;
+  }
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10rem;
+    background-image: url(../../images/bg-pattern-mobile.svg);
+    background-position: 50% -5%;
+    background-repeat: no-repeat;
+    background-size: 250px;
+  }
+  .card__body {
+    margin-top: 4rem;
+    padding: 2rem;
+    width: 100%;
+  }
+  .card__wraper {
+    overflow: inherit;
+  }
+  .card__image--box {
+    height: 80px;
+    top: -40px;
+    left: -15px;
+  }
+  .card__image--women {
+    margin: -7rem auto 0 auto;
+    max-width: 225px;
+  }
+  .card__body--header {
+    text-align: center;
+  }
+  .attribution {
+    right: 0;
+    bottom: 3px;
+    font-size: .775em;
+  }
+}

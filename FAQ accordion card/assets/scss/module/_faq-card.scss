@@ -1,0 +1,49 @@
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background-color: #fff;
+    background-image: url(../../images/bg-pattern-desktop.svg);
+    background-position: -65% 67%;
+    background-repeat: no-repeat;
+    background-size: 600px, 48px;
+
+    border-radius: 1rem;
+}
+
+.card > * {
+    flex: 1;
+    grid-gap: 1rem;
+}
+
+.card__images {
+    position: relative;
+}
+
+.card__wraper {
+    overflow: hidden;
+}
+
+.card__image--women {
+    margin-left: -4rem;
+    max-height: 285px;
+}
+
+.card__image--box {
+    position: absolute;
+
+    height: 120px;
+
+    top: 42%;
+    left: -14%;
+}
+
+.card__body {
+    padding: 4rem;
+}
+
+.card__body--header {
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
