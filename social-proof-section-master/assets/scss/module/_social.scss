@@ -1,0 +1,51 @@
+.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-top: 127px;
+    .social__content {
+        max-width: 654px;
+        .social__content--title {
+            font-size: 5.01875005018752em;
+            line-height: 1;
+        }
+        .social__content--description {
+            margin-top: 1em;
+            color: $dark-grayish-magenta;
+            font-size: 1.505625015056256em;
+            line-height: 1.3;
+        }
+    }
+    .social__ratings {
+        display: flex;
+        flex-direction: column;
+        .social__ratings--reviews {
+            display: flex;
+            margin-top: 1.5em;
+            padding: 18px 30px;
+
+            font-weight: 700;
+
+            line-height: 18px;
+
+            background-color: $light-grayish-magenta;
+
+            border-radius: 10px;
+            p {
+                margin-left: 1.75em;
+            }
+            &:nth-child(1) {
+                margin: 1.5em 92px 0 0;
+            }
+            &:nth-child(2) {
+                margin: 1.5em 46px 0 46px;
+            }
+            &:nth-child(3) {
+                margin: 1.5em 0 0 92px;
+            }
+        }
+    }
+}
