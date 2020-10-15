@@ -1,5 +1,6 @@
-@media screen and (max-width: 1523px) {
+@media only screen and (max-width: 1523px) {
     .cards-wrapper {
+        display: flex;
         justify-content: space-around;
     }
 }
@@ -17,6 +18,22 @@
             }
             .social__content--description {
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1312px) {
+    .cards-wrapper {
+        .cards {
+            &:nth-child(1) {
+                margin-top: 1em;
+            }
+            &:nth-child(2) {
+                margin-top: 1em;
+            }
+            &:nth-child(3) {
+                margin-top: 1em;
             }
         }
     }
@@ -64,7 +81,6 @@
 
     .cards-wrapper {
         .cards {
-            margin: 1em;
             font-size: 1em;
         }
     }
