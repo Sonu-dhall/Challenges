@@ -42,7 +42,7 @@ a { color: inherit; text-decoration: none; }
     justify-content: center;
     align-items: center;
 
-    background: url("../../images/bg-pattern-top.svg") left -300px top -443px no-repeat, url("../../images/bg-pattern-bottom.svg") right -300px bottom -443px no-repeat;
+    background: url("../../images/bg-pattern-top.svg") left 0 top -500px  no-repeat, url("../../images/bg-pattern-bottom.svg") right 0 bottom -500px no-repeat;
 }
 
 .card {
@@ -149,13 +149,13 @@ a { color: inherit; text-decoration: none; }
 
 @media only screen and (max-width: 1750px) {
     .wrapper {
-        background: url("../../images/bg-pattern-top.svg") left -400px top -543px no-repeat, url("../../images/bg-pattern-bottom.svg") right -400px bottom -543px no-repeat;
+        background: url("../../images/bg-pattern-top.svg") left -210px top -530px no-repeat, url("../../images/bg-pattern-bottom.svg") right -210px bottom -530px no-repeat;
     }
 }
 
-@media only screen and (max-width: 1540px) {
+@media only screen and (max-width: 1450px) {
     .wrapper {
-        background: url("../../images/bg-pattern-top.svg") left -500px top -643px no-repeat, url("../../images/bg-pattern-bottom.svg") right -500px bottom -643px no-repeat;
+        background: url("../../images/bg-pattern-top.svg") left -310px top -630px no-repeat, url("../../images/bg-pattern-bottom.svg") right -310px bottom -630px no-repeat;
     }
 }
 
