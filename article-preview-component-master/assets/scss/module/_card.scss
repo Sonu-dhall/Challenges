@@ -1,0 +1,271 @@
+.card {
+    display: flex;
+    flex-direction: row;
+
+    height: 280px;
+    background-color: #FFF;
+
+    border-radius: 10px;
+
+    box-shadow: 5px 14px 20px 0px rgba(158, 175, 194, 0.4);
+
+    .card__thumb {
+        img {
+            height: 100%;
+            width: 286px;
+
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+
+    .card__content {
+        display: flex;
+        flex-direction: column;
+
+        padding: 32px 40px;
+
+        .card__body {
+            color: $desaturated-dark-blue;
+            .card__title {
+                color: $very-dark-grayish-blue;
+                font-size: 1.5rem;
+                font-weight: $font-bold;
+            }
+            .card__description {
+                margin-top: 23px;
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+        }
+
+        .card__footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            margin-top: 23px;
+
+            img {
+                height: 40px;
+                width: 40px;
+
+                border-radius: 50%;
+            }
+
+            .card__footer__author {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-grow: 1;
+
+                margin-left: 16px;
+                .card__author {
+                    color: $very-dark-grayish-blue;
+                    font-weight: $font-bold;
+                }
+                .card__date {
+                    margin-top: 5px;
+                    color: $desaturated-dark-blue;
+                }
+            }
+
+            .card__tooltip {
+                .card__tooltip__button-content {
+                    position: relative;
+                    display: flex;
+                    flex-flow: row;
+                    align-items: center;
+                    width: 100%;
+                    height: 32px;
+                }
+            
+                .card__tooltip__button-content--default {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 4;
+                    display: flex;        
+                    align-items: center;
+                    width: 100%;
+                    height: 32px;
+                    opacity: 1;
+                }
+            
+                .card__tooltip__button-avatar {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    margin-right: 16px;
+                }
+            
+                .card__tooltip__button-label {
+                    display: flex;
+                    flex-flow: column;
+                }
+            
+                .button-label__name {
+                    margin: 0 0 2px 0;
+                    font-size: map-get($font-sizes, subtext-mobile);
+                    color: map-get($colors, darker);
+                    font-weight: 700;
+                }
+            
+                .button-label__date {
+                    margin: 0;
+                    font-size: map-get($font-sizes, subtext-mobile);
+                    color: map-get($colors, light);
+                    font-weight: 500;
+                }
+                
+                .card__tooltip__button-content--active {
+                    display: flex;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 3;
+                    align-items: center;
+                    opacity: 0;
+                    width: 100%;
+                    height: 32px;
+                    transition: opacity 1500ms;
+                }
+            
+                .button-label__share {
+                    display: flex;
+                    align-items: center;
+                    font-size: map-get($font-sizes, button-text-mobile);
+                    color: map-get($colors, lighter);
+                    font-weight: 200;
+                    letter-spacing: 6px;
+                    margin-right: 8px;
+        
+                    @media(min-width: 768px) {
+                        margin-right: 16px;
+                        font-size: map-get($font-sizes, button-text-desktop);
+                    }
+                }
+            
+                .button-socmed {
+                    display: flex;
+                    width: 80px;
+                    justify-content: space-between;
+                    align-items: center;
+                    transform: scale(1);
+                    transition: transform 100ms;
+        
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20px;
+                        height: 20px;
+                    }
+        
+                    a > svg {
+                        transform: scale(1);
+                        transition: transform 200ms;
+                    }
+        
+                    a > svg:hover {
+                        transform: scale(1.3);
+                    }
+        
+                    a > svg:active {
+                        transform: scale(1);
+                    }
+        
+                    @media(min-width: 768px){
+                        width: 88px;
+                    }
+                }
+                
+                .card__tooltip__button-share {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: auto;
+                    width: 30px;
+                    min-width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: map-get($colors, lighter);
+                    position: relative;
+                    z-index: 6;
+                    transform: rotate(0), scale(1);
+                    transition: transform 800ms, background-color 400ms;
+            
+                    &:hover {
+                        cursor: pointer;
+                    }
+            
+                    &:active {
+                        outline: none;
+                        transform: scale(1);
+                    }
+            
+                    > svg {
+                        margin-bottom: 1px;
+                        margin-left: 1px;
+                    }
+            
+                    @media(min-width: 768px) {
+                        transition: background-color 150ms, transform 400ms;
+                    }
+                }
+            
+                .svg-arrow {
+                    transition: fill 1600ms;
+            
+                    @media(min-width: 768px) {
+                        transition: fill 100ms;
+                    }
+                }
+            
+                .card__tooltip__button--background {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    z-index: 0;
+                    height: 64px;
+                    display: flex;
+                    flex-flow: row;
+                    background-color: #222;
+                    transition: width 400ms 200ms;
+                    border-radius: 0 0 8px 8px;
+                }
+            
+                .desktop-card__tooltip__button-content--active {
+                    display: none;
+            
+                    @media(min-width: 768px) {
+                        cursor: default;
+                        position: absolute;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 244px;
+                        height: 52px;
+                        background-color: map-get($colors, darker);
+                        border-radius: 8px;
+                        box-shadow: 0px 8px 16px 8px rgba(72, 85, 106, 0.15);
+                        bottom: -9999px;
+                        opacity: 0;
+                        transition:  opacity 150ms;
+                    }
+                }
+            
+                .desktop-card__tooltip__button-pointer {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    bottom: -10px;
+                    background-color: map-get($colors, darker);
+                    transform: rotate(45deg);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
